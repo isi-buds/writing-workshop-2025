@@ -209,7 +209,7 @@ Examples of common problems:
 
 -   Use terminology, acronyms or metrics that you have not defined
 
-    -   *When I was wrong*: It does *not* read as 'advanced'
+    -   You don't need your writing to look 'advanced' or 'sophisticated'
 
     -   Every acronym that you are going to use needs to be defined the first time you use it - [example {{< fa magnifying-glass >}}](https://www.causeweb.org/usproc/sites/default/files/usresp/2023-2/usresp%203174%20-%20extending%20multiple%20testing%20with%20unknown%20test%20dependency%20via%20the%20coco%20test%20with%20applications%20to%20cancer%20studies.pdf) (OS and PFS in Introduction)
 
@@ -361,11 +361,9 @@ For the remaining of the workshop we will do a blend of these two strategies.
 
 ## A paper "skeleton"
 
-In the [isi-buds organization](https://github.com/isi-buds) on GitHub, find and the repository `writing-workshop-2024`
+In the [isi-buds organization](https://github.com/isi-buds) on GitHub, find the repository `writing-workshop-2025`
 
-One person for each team, clone the workshop's repository (or download it); add a copy of the folder `paper` to your team's repository; push this change
-
-All team members: pull this update
+One person for each team, clone the workshop's repository (or download it) and invite your teammates as collaborators
 
 Together: look at what is in the folder
 
@@ -396,7 +394,7 @@ How to frame results section[^3]:
 
     -   Reference and make use of your Tables and Figures in the text. [Do not abandon them]{.medium-green}
 
-    -   Define a metric well - [example {{< fa magnifying-glass >}}](https://drive.google.com/drive/folders/1gRAAnH8o6nkAfnyC3VDZxffvuHXireWx) (highlighted text in Sec. 4.1)
+    -   Define a metric well 
 :::
 
 ## [Results]{.maroon}: Workout
@@ -626,15 +624,6 @@ Can you see what summarizes the [introduction]{style="color:#1277E3;"}? What rel
 
     -   [Past winners and honorable mentions](https://www.causeweb.org/usproc/projects/winners)
 
-## About you: submitting to USRESP
-
-![](figures/survey-submit-usresp.jpg){width="536"}
-
-Discuss with your team:
-
--   Who in your team wants to participate to the writing?
-
--   Who could be your advisor(s) \[*that is, who could give you feedback and supervise your paper*\]? When will you ask them?
 
 ## Tools
 
@@ -660,28 +649,5 @@ The file `03-results.qmd` has an example table created with **kable and kable ex
 -   Check out [their vignette](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
 :::
 
-## Your Feedback for me {{< fa handshake >}}
 
-Please take a moment to provide feedback for future editions of this workshop!
 
-::: {.columns .v-center-container}
-::: {.column width="50%"}
-### Link
-
-<br> <br> [bit.ly/isi-buds-writers-24](bit.ly/isi-buds-writers-24)
-:::
-
-::: {.column width="50%"}
-### QR code
-
-![](figures/feedback-qr-code.png){width="536"}
-:::
-:::
-
-# Thank you! <br>
-
-*Reach out to me for any questions*
-
-{{< fa envelope >}}   fzricci\@uci.edu
-
-{{< fa globe >}}   <https://federicazoe.github.io/>

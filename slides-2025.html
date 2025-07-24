@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="slides-2025_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slides-2025_files/libs/quarto-html/tabby.min.js"></script>
+<script src="slides-2025_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides-2025_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="slides-2025_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides-2025_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="slides-2025_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="slides-2025_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="slides-2025_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="slides-2025_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.45">
+
+  <title>slides-2025</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="slides-2025_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides-2025_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="slides-2025_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="slides-2025_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides-2025_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides-2025_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides-2025_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="writing-a-data-analysis-report" class="title-slide slide level1 center" data-background-image="figures/patrick-fore-typewriter.jpg" data-background-size="cover">
+<h1><span class="white">Writing a Data Analysis</span> <br> <span class="white">report</span></h1>
+<h2>
+<span class="light-blue">ISI-BUDS 2025</span>
+</h2>
+<h3>
+<span class="light-green">Volodymyr Minin <br> (using materials developed by <br> Dr.&nbsp;Federica Zoe Ricci <br> when she wasn’t a doctor yet!)</span>
+</h3>
+</section>
+<section id="what-are-we-learning-today" class="slide level2">
+<h2>What are we learning today?</h2>
+<ul>
+<li class="fragment"><p><strong>writing a paper</strong> (data analysis report)</p>
+<ul>
+<li class="fragment"><p>structure of a paper</p></li>
+<li class="fragment"><p>strategies to get started writing</p></li>
+<li class="fragment"><p>strategies for organizing the work</p></li>
+<li class="fragment"><p>useful software</p></li>
+<li class="fragment"><p>what is a good title/abstract? what is a good introduction?</p></li>
+<li class="fragment"><p>look at examples of what’s good or less-good</p></li>
+</ul></li>
+<li class="fragment"><p><strong>USRESP competition</strong></p>
+<ul>
+<li class="fragment">guidelines and logistics</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-a-data-analysis-da-paper" class="slide level2">
+<h2>What is a data analysis (DA) paper?</h2>
+<p>It’s usually the <strong>culmination of a research project</strong>.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>It is a document to describe to someone:</p>
+<ul>
+<li class="fragment"><p>an interesting problem (that they might not know)</p></li>
+<li class="fragment"><p>ways to approach the problem (that they might not know!)</p></li>
+<li class="fragment"><p>what results one gets when they approach the problem in these ways</p></li>
+<li class="fragment"><p>what insights these results tell us (and how they relate to other insights that people could read elsewhere)</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-a-data-analysis-da-paper-1" class="slide level2 scrollable">
+<h2>What is a data analysis (DA) paper?</h2>
+<p>It’s usually the culmination of a research project.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>It is a document to describe to someone:</p>
+<div>
+<ol type="1">
+<li><p><span class="evergreen">an interesting problem (that they might not know)</span></p></li>
+<li><p><span class="medium-green">ways to approach the problem (that they might not know!)</span></p></li>
+<li><p><span class="maroon">what results one gets when they approach the problem in these ways</span></p></li>
+<li><p><span class="dark-pink">what insights these results tell us (and how they relate to other insights that people can find elsewhere)</span></p></li>
+</ol>
+</div>
+</div><div class="column" style="width:50%;">
+<p>What are the <strong>common sections</strong> of DA report?</p>
+<div>
+<ul>
+<li><p>Title</p></li>
+<li><p>Abstract</p>
+<ol type="1">
+<li><p><span class="evergreen">Introduction (Background)</span></p></li>
+<li><p><span class="medium-green">Methods</span></p></li>
+<li><p><span class="maroon">Results</span></p></li>
+<li><p><span class="dark-pink">Discussion/Conclusion</span></p></li>
+</ol></li>
+<li><p>References</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="but-why-writing-a-paper" class="slide level2">
+<h2>But… why writing a paper?</h2>
+<ul>
+<li class="fragment"><p>Personal satisfaction</p>
+<ul>
+<li class="fragment">see project come together</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img data-src="figures/motivation.png" width="1000"></p>
+<ul>
+<li class="fragment"><p>Gain experience with scientific writing (essential in every data science jobs, not only academia)</p></li>
+<li class="fragment"><p>Can talk about this experience in your cover letter for grad school</p></li>
+</ul>
+</div>
+</section>
+<section id="why-submitting-a-paper-to-a-competition" class="slide level2">
+<h2>Why submitting a paper to a competition</h2>
+<ul>
+<li class="fragment"><p>Motivation</p>
+<ul>
+<li class="fragment">Let’s be real, we all do best when we are <strong>targeting a clear output</strong> and a <strong>deadline</strong></li>
+</ul></li>
+<li class="fragment"><p>Get feedback</p>
+<ul>
+<li class="fragment">With a competition to work for, there can be a process of back-and-forth feedback from your supervisor(s) on this project, that you <strong>can learn a lot from</strong>!</li>
+</ul></li>
+<li class="fragment"><p>Your CV</p>
+<ul>
+<li class="fragment">You could be among the winners</li>
+</ul></li>
+<li class="fragment"><p>Learn some concrete guidelines and judging criteria</p>
+<ul>
+<li class="fragment">We do some of this together today</li>
+</ul></li>
+</ul>
+</section>
+<section id="three-workshop-parts" class="slide level2">
+<h2>Three workshop parts</h2>
+<ul>
+<li class="fragment"><p>The elements of a good paper</p></li>
+<li class="fragment"><p>Writing a paper (hands-on work in teams)</p></li>
+<li class="fragment"><p>Final remarks and links to resources</p></li>
+</ul>
+</section>
+<section id="examples-of-da-papers" class="slide level2 scrollable">
+<h2>Examples of DA papers</h2>
+<p>Previous winners and honorable mentions at USRESP include<sup>1</sup> :</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Title and Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Drug treatment dropout</td>
+<td><a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2021-2/Psychiatric%20Comorbidity%20in%20Opioid%20Use%20Treatment%20Outcomes.pdf"><em>Psychiatric Comorbidity in Opioid Use Treatment Outcomes</em></a><em>,</em> Linda Tang (Fall 2021)</td>
+</tr>
+<tr class="even">
+<td>Air pollution over time</td>
+<td><a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2022-1/behind-the-smoke.pdf"><em>Behind The Smoke: An Extreme Value Analysis Of Air Pollution In Minnesota</em></a><em>,</em> Yicheng Shen, Jacob Flignor, Libby Nachreiner, &amp; Karen Wang (Spring 2022)</td>
+</tr>
+<tr class="odd">
+<td>Prediction and management of flash floods</td>
+<td><a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2022-2/storm%20chasers%20synthesizing%20new%20england%20weather%20data%20on%20a%20dashboard%20for%20emergency%20response%20workers.pdf"><em>Storm Chasers: Synthesizing New England Weather Data On A Dashboard For Emergency Response Workers</em></a> Irene Foster, Sunshine Schneider, Caitlin Timmons, Katelyn Diaz (Fall 2022)</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.causeweb.org/usproc/projects/winners">causeweb.org/usproc/projects/winners</a></p></li></ol></aside></section></section>
+<section>
+<section id="the-elements-of-a-good-paper" class="title-slide slide level1 center">
+<h1>The elements of a good paper</h1>
+
+</section>
+<section id="what-makes-for-a-good-data-analysis-paper" class="slide level2">
+<h2>What makes for a good data analysis paper?</h2>
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Discuss in teams and identify <strong>one to three elements</strong> you think should characterize a good data analysis paper (2 minutes)</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment"><p>It is clear and easy to read</p></li>
+<li class="fragment"><p>It tells an interesting story</p></li>
+<li class="fragment"><p>It makes a good statistical analysis and explains the results well</p></li>
+</ul>
+</div>
+</section>
+<section id="what-makes-for-a-good-data-analysis-paper-1" class="slide level2 scrollable">
+<h2>What makes for a good data analysis paper?</h2>
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Discuss in teams and identify <strong>one to three elements</strong> you think should characterize a good data analysis paper (2 minutes)</p>
+</div>
+</div>
+</div>
+<div>
+<ul>
+<li><p>It is clear and easy to read <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <em>Overall <span class="dark-pink">clarity</span> and <span class="dark-pink">presentation</span></em><sup>1</sup></p></li>
+<li><p>It tells an interesting story <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <span class="purple"><em>Originality, creativity</em></span><em>, and <span class="purple">significance</span> of the study</em><sup>1</sup></p></li>
+<li><p>It makes a good statistical analysis and explains the results well <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <span class="evergreen"><em>Accuracy</em></span> <em>of data analysis, conclusions, and discussion</em><sup>1</sup></p></li>
+</ul>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>From <em>Assessment of the USRESP projects</em> on <a href="https://www.causeweb.org/usproc/usresp">causeweb.org/usproc/usresp</a></p></li></ol></aside></section>
+<section id="what-affects-overall-clarity-and-presentation" class="slide level2">
+<h2>What affects overall <span class="dark-pink">clarity and presentation</span>?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><span class="black"><strong>What content is included/not included</strong></span></strong></p>
+</div>
+<div class="callout-content">
+<p>Good principle: <em>every element in a story must be necessary, and irrelevant elements should be removed</em></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Examples of common problems:</p>
+<ul>
+<li class="fragment"><p>Not understandable to a reader with little knowledge of the applied domains</p></li>
+<li class="fragment"><p>Define something that you are never going to use<br>
+<i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> e.g.&nbsp;Define HIV, describe its implications and prevalence, but then your analysis does not use information on HIV and HIV is never mentioned again (e.g.&nbsp;in the discussion)</p></li>
+<li class="fragment"><p>Use terminology, acronyms or metrics that you have not defined</p>
+<ul>
+<li class="fragment"><p>You don’t need your writing to look ‘advanced’ or ‘sophisticated’</p></li>
+<li class="fragment"><p>Every acronym that you are going to use needs to be defined the first time you use it - <a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2023-2/usresp%203174%20-%20extending%20multiple%20testing%20with%20unknown%20test%20dependency%20via%20the%20coco%20test%20with%20applications%20to%20cancer%20studies.pdf">example <i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i></a> (OS and PFS in Introduction)</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="what-affects-overall-clarity-and-presentation-1" class="slide level2">
+<h2>What affects overall <span class="dark-pink">clarity and presentation</span>?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><span class="black"><strong>How content is organized in your paper</strong></span></strong></p>
+</div>
+<div class="callout-content">
+<p>If you read your paper: <em>can you tell what the story is?</em></p>
+</div>
+</div>
+</div>
+<p>Common problems:</p>
+<ul>
+<li class="fragment">Wait too long before (or never) state what you worked on <em>exactly</em></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>In the introduction, explicitly <strong>state the hypothesis/goals</strong> of the paper.</p>
+</div>
+</div>
+</div>
+<p>A <a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2021-2/Psychiatric%20Comorbidity%20in%20Opioid%20Use%20Treatment%20Outcomes.pdf">good example <i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i></a>: <em>Psychiatric Comorbidity in Opioid Use Treatment Outcomes</em> by Linda Tang (last paragraph of Introduction)</p>
+</div>
+</section>
+<section id="what-affects-originality-creativity-and-significance" class="slide level2">
+<h2>What affects <span class="purple">originality, creativity and significance</span>?</h2>
+<div>
+<ul>
+<li>The analysis seems to address a not so interesting question</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tips</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p>Always try to work on an interesting application</p></li>
+<li><p>What is something <em>you</em> think is particularly exciting of the topic - make sure you communicate that excitement!</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div>
+<ul>
+<li>The paper feels a little ‘dull’</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Can you add an effective and eye-catching visualization to represent your topic?</p>
+<p>A <a href="https://www.causeweb.org/usproc/sites/default/files/usresp/2022-1/behind-the-smoke.pdf">good example <i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i></a>: <em>Behind The Smoke: An Extreme Value Analysis Of Air Pollution In Minnesota</em> by Yicheng Shen, Jacob Flignor, Libby Nachreiner, &amp; Karen Wang (Figure 1, Introduction)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-affects-accuracy" class="slide level2">
+<h2>What affects <span class="evergreen">accuracy</span>?</h2>
+<div>
+<ul>
+<li>Something about the data analysis seems inaccurate/inappropriate</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tips</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Make sure to mention why a certain methodology was chosen, what else could be considered, why it was excluded</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div>
+<ul>
+<li>Something about the interpretation of results seems inaccurate</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p>Wait, so what is the answer to the research questions?</p></li>
+<li><p>Avoid overgeneralizing or overstating your results</p></li>
+</ul>
+<p>A good example</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-accuracy-2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p>From <em>Behind The Smoke: An Extreme Value Analysis Of Air Pollution In Minnesota</em> by Yicheng Shen, Jacob Flignor, Libby Nachreiner, &amp; Karen Wang</p>
+</div>
+</div>
+</div>
+</div>
+<p>:::</p>
+</div>
+</section></section>
+<section>
+<section id="writing-a-paper" class="title-slide slide level1 center">
+<h1>Writing a paper</h1>
+
+</section>
+<section id="getting-started-writing-when" class="slide level2">
+<h2>Getting started writing: when?</h2>
+<ul>
+<li class="fragment"><p><em>After</em> the project is concluded: Project –&gt; Writing</p>
+<ul>
+<li class="fragment"><p><em>Pros</em>: Content is decided</p></li>
+<li class="fragment"><p><em>Cons</em>: Content is decided</p></li>
+</ul></li>
+<li class="fragment"><p><em>During</em> project development<em>:</em> Project <em>–&gt;</em> Writing -&gt; Project -&gt; …</p>
+<ul>
+<li class="fragment"><p><em>Pros</em>: Writing about the project can improve the way you think about it and the choices you make</p></li>
+<li class="fragment"><p><em>Cons</em>: Content might change</p></li>
+</ul></li>
+<li class="fragment"><p>Can even think of the paper <em>before</em> starting working on the project: Writing -&gt; Project -&gt; …</p>
+<ul>
+<li class="fragment"><em>Pros</em>: Thinking how you would write about the project can inform which project you end up working on</li>
+</ul></li>
+</ul>
+</section>
+<section id="back-to-the-papers-structure" class="slide level2">
+<h2>Back to the paper’s structure</h2>
+<ul>
+<li class="fragment"><p>Abstract - <em>overview of the project</em></p></li>
+<li class="fragment"><p>Introduction - <em>what is your project about?</em></p></li>
+<li class="fragment"><p>Methods - <em>what did you do and how?</em></p></li>
+<li class="fragment"><p>Results - <em>what did you find out?</em></p></li>
+<li class="fragment"><p>Discussion - <em>what do your findings mean?</em></p></li>
+</ul>
+</section>
+<section id="how-to-get-started-strategies" class="slide level2 scrollable">
+<h2>How to get started: Strategies</h2>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Strategy 1 - High level to low level</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li class="fragment"><p>Create empty document, create empty sections</p></li>
+<li class="fragment"><p>In each section, outline points to make</p></li>
+<li class="fragment"><p>Visualize the resulting paper in your head, and reiterate 2., until it feels like the paper would tell the story well</p></li>
+<li class="fragment"><p>In each section, list the paragraphs you need to write (i.e.&nbsp;the goal of the paragraphs and their sequence)</p></li>
+<li class="fragment"><p>Fill-in the content of each paragraph accordingly</p></li>
+</ol>
+<ul>
+<li class="fragment">This can be extremely helpful if you are co-writing the paper with others!</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Strategy 2 - From results backward</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li class="fragment"><p>Start from thinking how you would visualize the results: what are your main figures (tables)?</p></li>
+<li class="fragment"><p>In reverse, plan Methods and Introduction to <em>tell the reader just all they need to know</em> to fully understand and appreciate the results.</p></li>
+<li class="fragment"><p>Write the Discussion section. Edit the Introduction if needed, to provide necessary context to appreciate/anticipate discussion.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>For the remaining of the workshop we will do a blend of these two strategies.</p>
+</div>
+</section>
+<section id="a-paper-skeleton" class="slide level2">
+<h2>A paper “skeleton”</h2>
+<p>In the <a href="https://github.com/isi-buds">isi-buds organization</a> on GitHub, find the repository <code>writing-workshop-2025</code></p>
+<p>One person for each team, clone the workshop’s repository (or download it) and invite your teammates as collaborators</p>
+<p>Together: look at what is in the folder</p>
+</section>
+<section id="results-content" class="slide level2 scrollable">
+<h2><span class="maroon">Results</span>: Content</h2>
+<p><em>What did your study find out?</em></p>
+<p>How to frame results section<sup>1</sup>:</p>
+<ul>
+<li class="fragment"><p>typically, results sections <strong>start with descriptive statistics</strong> and <strong>inferential</strong> (i.e.&nbsp;hypothesis tests) <strong>statistics come next</strong>.</p></li>
+<li class="fragment"><p>information presented must be relevant in helping to answer the research question(s) of interest</p></li>
+<li class="fragment"><p><strong>Tables and figures</strong> are useful in this section and should be labeled, embedded in the text, and <strong>referenced appropriately</strong>.</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>From <em>Assessment of the USRESP projects</em> on <a href="https://www.causeweb.org/usproc/usresp">causeweb.org/usproc/usresp</a></p></li></ol></aside></section>
+<section id="results-tips" class="slide level2">
+<h2><span class="maroon">Results</span>: Tips</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tips</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><p>Focus on a few, well explained points (e.g.&nbsp;1, 2 or 3 main results)</p></li>
+<li class="fragment"><p>Think how you would visualize these results best</p></li>
+<li class="fragment"><p>Make these visualizations and write “around” the visualizations</p>
+<ul>
+<li class="fragment"><p>Reference and make use of your Tables and Figures in the text. <span class="medium-green">Do not abandon them</span></p></li>
+<li class="fragment"><p>Define a metric well</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="results-workout" class="slide level2">
+<h2><span class="maroon">Results</span>: Workout</h2>
+<p>Open the file paper/exercises/1-results.md and follow the instructions:</p>
+<ul>
+<li class="fragment"><p>Work in sub-teams (5 min)</p></li>
+<li class="fragment"><p>Talk within each team (3 min)</p></li>
+<li class="fragment"><p>One team shares with everyone (random pick).</p></li>
+</ul>
+</section>
+<section id="methodology-content4" class="slide level2 scrollable">
+<h2><span class="maroon">Methodology</span>: Content<sup>1</sup></h2>
+<ul>
+<li class="fragment"><strong>Data collection</strong><br>
+
+<ul>
+<li class="fragment">Explain how the data was collected/experiment was conducted.</li>
+<li class="fragment">Who was included? Who does this sample represent?</li>
+<li class="fragment">What were issues with data collection (e.g.&nbsp;non-response rates)? [Note: don’t discuss the impact of these issues here - save that for when you talk about limitations in the Discussion section.]</li>
+</ul></li>
+<li class="fragment"><strong>Variable creation</strong><br>
+
+<ul>
+<li class="fragment">What are the variables in your analysis and how are they defined? For example, if you created a combined (frequency times quantity) drinking variable you should describe how.</li>
+</ul></li>
+<li class="fragment"><strong>Analytic Methods</strong><br>
+
+<ul>
+<li class="fragment">Explain the statistical procedures that will be used to analyze your data.</li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>From <em>Assessment of the USRESP projects</em> on <a href="https://www.causeweb.org/usproc/usresp">causeweb.org/usproc/usresp</a></p></li></ol></aside></section>
+<section id="methodology-accuracy" class="slide level2">
+<h2>Methodology: <span class="evergreen">accuracy</span></h2>
+<div>
+<ul>
+<li><strong>Choose a statistical model that accounts for specific aspects of the application considered (and motivate the choice)</strong></li>
+</ul>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p>From <em>Psychiatric Comorbidity In Opioid Use Treatment Outcomes</em> (Linda Tang, winner at 2021 Fall USRESP)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-accuracy-1.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methodology-clarity-and-presentation-of-notation" class="slide level2">
+<h2>Methodology: <span class="dark-pink">clarity and presentation</span> of notation</h2>
+<div>
+<ul>
+<li><strong>Make notation concrete</strong></li>
+</ul>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p>From <em>An Evaluation Of Regularization Methods: When There Are More Predictors Than Observations</em> (Kenny Chen, honorable mention at 2021 Fall USRESP)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-clarity-1.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Note: in <em>this</em> paper, this excerpt was from the Introduction section</p>
+</div>
+</section>
+<section id="methodology-clarity-and-presentation---can-you-visualize-your-methods" class="slide level2">
+<h2>Methodology: <span class="dark-pink">clarity and presentation</span> - can you visualize your methods?</h2>
+<div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p><strong>Design visualizations to help digest complicated methods</strong></p></li>
+<li><p><strong>Write clear figure captions</strong></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-clarity-2.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
+<p>From <em>Storm Chasers: Synthesizing New England Weather Data On A Dashboard For Emergency Response Workers</em> (Irene Foster, Sunshine Schneider, Caitlin Timmons, Katelyn Diaz,winner at 2022 Fall USRESP)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methodology-workout" class="slide level2">
+<h2><span class="maroon">Methodology</span>: Workout</h2>
+<p>Open the file paper/exercises/2-methodology.md and follow the instructions:</p>
+<ul>
+<li class="fragment"><p>Work in sub-teams (5 min)</p></li>
+<li class="fragment"><p>Talk within each team (3 min)</p></li>
+<li class="fragment"><p>One team shares with everyone (random pick).</p></li>
+</ul>
+</section>
+<section id="methodology-workout-1" class="slide level2">
+<h2><span class="maroon">Methodology</span>: Workout</h2>
+<p>Open the file paper/exercises/1-results.md and follow the instructions:</p>
+<ul>
+<li class="fragment"><p>Work in sub-teams (10 min)</p></li>
+<li class="fragment"><p>Talk within each team (5 min)</p></li>
+<li class="fragment"><p>One team shares with everyone (random pick).</p></li>
+</ul>
+</section>
+<section id="introduction-content" class="slide level2">
+<h2><span class="maroon">Introduction</span>: Content</h2>
+<ul>
+<li class="fragment"><p><strong>Logical organization</strong>, moving from the <strong>general to the specific</strong></p></li>
+<li class="fragment"><p>Provide <strong>sufficient background</strong> <strong>to understand</strong> the paper</p></li>
+<li class="fragment"><p><strong>Relate this paper to other work</strong> in the scientific literature</p></li>
+<li class="fragment"><p>Provide explanation for <strong>why this work is important</strong></p></li>
+<li class="fragment"><p>End with <strong>statements about the hypothesis/goals</strong> of the paper</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><p>As you write, think that every undergraduate student should be able to follow your introduction.</p></li>
+<li class="fragment"><p>You can be specific, but be gentle, e.g.&nbsp;remind the reader of definitions.</p></li>
+<li class="fragment"><p>You <em>can</em> write obvious things to establish the grounds, e.g.&nbsp;<em>Alzheimer disease is one of the main challenges faced by modern medicine.</em>. Pro-move is back it up with figures/statements from a reputable source, e.g.&nbsp;<em>Indeed, an estimated %% of adults will develop this disease as they age [citation]</em>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="introduction-originality-creativity-and-significance" class="slide level2">
+<h2>Introduction: <span class="purple">originality, creativity and significance</span></h2>
+<div>
+<ul>
+<li><strong>Highlight the contributions of your work</strong> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Significance</li>
+</ul>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p>From <em>Exploring Missingness and its Implications on Traffic Stop Data</em> (Amber Lee, winner at 2020 Fall USRESP)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-significance-1.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="introduction-originality-creativity-and-significance-1" class="slide level2">
+<h2>Introduction: <span class="purple">originality, creativity and significance</span></h2>
+<div>
+<ul>
+<li><strong>Highlight the potential implications of your work in thee real-world</strong> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Significance</li>
+</ul>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p>From <em>Psychiatric Comorbidity in Opioid Use Treatment Outcomes</em> (Linda Tang , winner at 2021 Fall USRESP)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/example-significance-3.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="introduction-workout" class="slide level2">
+<h2><span class="maroon">Introduction</span>: Workout</h2>
+<p>Open the file paper/exercises/3-introduction.md and follow the instructions:</p>
+<ul>
+<li class="fragment"><p>Work in sub-teams (10 min)</p></li>
+<li class="fragment"><p>Talk within each team (5 min)</p></li>
+<li class="fragment"><p>One team shares with everyone (random pick).</p></li>
+</ul>
+</section>
+<section id="discussion-content5" class="slide level2 scrollable">
+<h2><span class="maroon">Discussion</span>: Content<sup>1</sup></h2>
+<ul>
+<li class="fragment"><p>Clearly state whether the results answer the question (support or disprove the hypothesis)?</p></li>
+<li class="fragment"><p>Cite specific data from the results to support each interpretation. Articulate the basis for supporting or rejecting each hypothesis</p></li>
+<li class="fragment"><p>Relate the results of the current work to previous research</p></li>
+</ul>
+<div class="fragment">
+<p>This depends on the <em>exact</em> results you get, there is not much to plan ahead! (So no workout)</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>From <em>Assessment of the USRESP projects</em> on <a href="https://www.causeweb.org/usproc/usresp">causeweb.org/usproc/usresp</a></p></li></ol></aside></section>
+<section id="abstract" class="slide level2">
+<h2><span class="maroon">Abstract</span></h2>
+<p>Why do we write it?</p>
+<ul>
+<li class="fragment">Give the reader an overview of what they will find in the paper if they move on to read it.</li>
+</ul>
+<div class="fragment">
+<p>How can we achieve that? A simple way:</p>
+<ul>
+<li class="fragment">One sentence that summarizes the <span style="color:#1277E3;">introduction</span>. One for the <span style="color:#098309;">background</span>. One for the <span style="color:#E58F1B;">methods</span>. One for the <span style="color:#C01BE5;">results</span>. One for the <span style="color:#E51B80;">discussion</span>.</li>
+</ul>
+</div>
+</section>
+<section id="general-abstract-example" class="slide level2">
+<h2>General <span class="maroon">abstract</span> example</h2>
+<p><br></p>
+<p><span style="color:#1277E3;">XXX is important because of YYY.</span> <span style="color:#098309;">Previous studies demonstrated / have neglected ZZZ.</span> <span style="color:#E58F1B;">In this work we do QQQ.</span> <span style="color:#C01BE5;">We find that BBB.</span> <span style="color:#E51B80;">Our study suggests that KKK.</span></p>
+</section>
+<section id="specific-abstract-example" class="slide level2">
+<h2>Specific <span class="maroon">abstract</span> example</h2>
+<p>From <em>Behind The Smoke: An Extreme Value Analysis Of Air Pollution In Minnesota</em> by Yicheng Shen, Jacob Flignor, Libby Nachreiner, &amp; Karen Wang (USRESP 2022 Spring)</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Poor air quality is a major environmental health threat. Even short-term exposure to poor air quality— such as during extreme pollution events—can cause severe respiratory distress. While there have been significant decreases in Minnesota air pollution levels over the past 40 years, the summer of 2021 upset this trend with Hennepin County reporting the highest particulate measure in the past 20 years. This study focuses on analyzing the extreme values of pollutant concentration levels of sulfur dioxide (SO2) and fine inhalable particles (PM2.5) across three Minnesota counties as collected by the Environmental Protection Agency from 1980 to 2021. We employ extreme value analysis methods to fit the pollutant data. The models find that SO2 levels have fallen substantially since 1980 in accordance with EPA policies regulating diesel fuel and coal power plants. This dramatic decrease has made the magnitude of severe pollution incidents appear far more extreme than in earlier decades, with typical events in the 1980-1990s often equating to one in a hundred year events today. By contrast, no downward trend in PM2.5 levels was observed over the past 20 years, an expected result given that PM2.5 has more varied sources and is therefore harder to regulate than SO2. However, models show a significant seasonal trend with peaks during winter months, revealing this past ‘summer of smoke’ as particularly extreme.</p>
+</div>
+</div>
+</div>
+<p>Can you see what summarizes the <span style="color:#1277E3;">introduction</span>? What relates to the <span style="color:#098309;">background</span>? What relates to the <span style="color:#E58F1B;">methods</span>? What relates to the <span style="color:#C01BE5;">results</span>? What relates to the <span style="color:#E51B80;">discussion</span>?</p>
+</section>
+<section id="specific-abstract-example-1" class="slide level2">
+<h2>Specific <span class="maroon">abstract</span> example</h2>
+<p>From <em>Behind The Smoke: An Extreme Value Analysis Of Air Pollution In Minnesota</em> by Yicheng Shen, Jacob Flignor, Libby Nachreiner, &amp; Karen Wang (USRESP 2022 Spring):</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><span class="black"><i class="fa-solid fa-eye" aria-label="eye"></i> Example</span></strong></p>
+</div>
+<div class="callout-content">
+<p><span style="color:#1277E3;">Poor air quality is a major environmental health threat. Even short-term exposure to poor air quality— such as during extreme pollution events—can cause severe respiratory distress.</span> <span style="color:#098309;">While there have been significant decreases in Minnesota air pollution levels over the past 40 years, the summer of 2021 upset this trend with Hennepin County reporting the highest particulate measure in the past 20 years.</span> <span style="color:#E58F1B;">This study focuses on analyzing the extreme values of pollutant concentration levels of sulfur dioxide (SO2) and fine inhalable particles (PM2.5) across three Minnesota counties as collected by the Environmental Protection Agency from 1980 to 2021. We employ extreme value analysis methods to fit the pollutant data.</span> <span style="color:#C01BE5;">The models find that SO2 levels have fallen substantially since 1980</span><span style="color:#E51B80;">in accordance with EPA policies regulating diesel fuel and coal power plants.</span> <span style="color:#E51B80;">This dramatic decrease has made the magnitude of severe pollution incidents appear far more extreme than in earlier decades, with typical events in the 1980-1990s often equating to one in a hundred year events today.</span> <span style="color:#C01BE5;">By contrast, no downward trend in PM2.5 levels was observed over the past 20 years,</span><span style="color:#E51B80;">an expected result given that PM2.5 has more varied sources and is therefore harder to regulate than SO2.</span> <span style="color:#C01BE5;">However, models show a significant seasonal trend with peaks during winter months,</span><span style="color:#E51B80;">revealing this past ‘summer of smoke’ as particularly extreme.</span></p>
+</div>
+</div>
+</div>
+<p>Can you see what summarizes the <span style="color:#1277E3;">introduction</span>? What relates to the <span style="color:#098309;">background</span>? What relates to the <span style="color:#E58F1B;">methods</span>? What relates to the <span style="color:#C01BE5;">results</span>? What relates to the <span style="color:#E51B80;">discussion</span>?</p>
+</section></section>
+<section>
+<section id="final-remarks-resources" class="title-slide slide level1 center">
+<h1>Final remarks &amp; Resources</h1>
+
+</section>
+<section id="usresp" class="slide level2">
+<h2>USRESP</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><strong>Next deadline:</strong> <span class="maroon">December 2024</span> (usually Dec 20th)</li>
+</ul>
+<p><br></p>
+<ul>
+<li class="fragment"><p><strong>Everything</strong> from USRESP shown today is on their website!</p>
+<ul>
+<li class="fragment"><p><a href="https://www.causeweb.org/usproc/usresp">General Information</a></p></li>
+<li class="fragment"><p><a href="https://www.causeweb.org/usproc/report-template-USRESP">Template and evaluation criteria</a></p></li>
+<li class="fragment"><p><a href="https://www.causeweb.org/usproc/projects/winners">Past winners and honorable mentions</a></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<div>
+<p>In the <code>paper</code> folder, the skeleton uses Quarto for writing a paper. Look at use of:</p>
+<ul>
+<li><p>child-documents</p></li>
+<li><p>section planning</p></li>
+<li><p>cross-references Sections, Equations, Figures and Tables</p></li>
+<li><p>references</p></li>
+<li><p>quick demo of adding new references</p></li>
+</ul>
+</div>
+<div class="fragment">
+<div>
+<p>The file <code>03-results.qmd</code> has an example table created with <strong>kable and kable extra</strong></p>
+<ul>
+<li>Check out <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">their vignette</a></li>
+</ul>
+</div>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</div>
+</section></section>
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="slides-2025_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="slides-2025_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="slides-2025_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides-2025_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
